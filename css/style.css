@@ -1,0 +1,558 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffe1a8;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    color: #723d46;
+    text-align: center;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #472d30;
+    padding: 15px 30px;
+    color: #fff;
+}
+
+.top-nav .logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Serif', sans-serif;
+}
+
+.top-nav .nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.top-nav .nav-links li {
+    margin: 0;
+}
+
+.top-nav .nav-links a {
+    text-decoration: none;
+    color: #ffe1a8;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.top-nav .nav-links a:hover {
+    color: #e26d5c;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cart Icon */
+.cart-icon a img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Auth Links */
+.auth-links a {
+    color: #ffe1a8;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.auth-links a:hover {
+    color: #e26d5c;
+}
+
+/* Collapse Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #723d46;
+    transition: left 0.3s ease;
+    padding-top: 20px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e26d5c;
+}
+
+/* Mobile Hamburger Icon */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .top-nav .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #c9cba3;
+    padding: 3rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons button {
+    background-color: #e26d5c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.cta-buttons button:hover {
+    background-color: #723d46;
+}
+
+/* Power of Mushrooms Section */
+.section {
+    padding: 3rem 1.5rem;
+}
+
+.cta-buttons button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #e26d5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.cta-buttons button:hover {
+    background-color: #723d46;
+}
+
+/* Product Cards Section */
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+}
+
+.product-card .buttons button {
+    background-color: #e26d5c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.product-card .buttons button:hover {
+    background-color: #723d46;
+}
+
+/* Footer */
+.footer {
+    background-color: #723d46;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .hamburger-menu {
+        display: block;
+    }
+
+    .product-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Recipes & Benefits Section */
+.recipes-benefits-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.recipes-benefits-section h2 {
+    font-size: 2.5rem;
+    color: #723d46;
+    margin-bottom: 1rem;
+}
+
+.recipes-benefits-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #472d30;
+}
+
+.recipes-benefits-section i {
+    font-size: 1.1rem;
+    color: #723d46;
+}
+
+.recipe-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.recipe-card h3 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: #723d46;
+}
+
+.recipe-card p {
+    font-size: 1rem;
+    color: #472d30;
+}
+
+.recipe-card .btn-link {
+    background-color: #e26d5c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0.5rem;
+    display: inline-block;
+}
+
+.recipe-card .btn-link:hover {
+    background-color: #723d46;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .recipe-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #fff0f3;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    color: #723d46;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials-section p {
+    font-size: 1.2rem;
+    color: #472d30;
+    margin-bottom: 2rem;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.testimonial-text p {
+    font-size: 1.2rem;
+    color: #472d30;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: #f6b800;
+}
+
+.star {
+    color: #f6b800;
+    margin: 0 3px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 2rem 1rem;
+    }
+
+    .testimonial {
+        padding: 1.5rem;
+    }
+}
+
+/* Newsletter Signup Section */
+.newsletter-section {
+    background-color: #ffe1a8;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section h2 {
+    font-size: 2rem;
+    color: #723d46;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+}
+
+.newsletter-section p {
+    font-size: 1rem;
+    color: #472d30;
+    margin-bottom: 20px;
+}
+
+.newsletter-section .incentive p {
+    font-size: 1.1rem;
+    color: #e26d5c;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 250px;
+    font-size: 1rem;
+    border: 2px solid #723d46;
+    border-radius: 5px;
+    outline: none;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e26d5c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #ff4d6d;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #472d30;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #ffe1a8;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e26d5c;
+}
+
+.footer-social-media {
+    margin: 20px 0;
+}
+
+.footer-social-media .social-icon {
+    margin: 0 15px;
+}
+
+.footer-social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-media img:hover {
+    transform: scale(1.1);
+}
+
+.footer-tagline {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #ffe1a8;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.footer-trust-badges {
+    margin-top: 20px;
+}
+
+.footer-trust-badges .trust-icon {
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-trust-badges .trust-icon:hover {
+    transform: scale(1.1);
+}
